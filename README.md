@@ -1,13 +1,12 @@
 # String Calculator Kata
 
-This repo contains a sample to start the kata of this [link](https://kata-log.rocks/string-calculator-kata)
 
-We only ask to complete the 5 first steps of the kata
 
 ## Requirements
-- [ ] Java 11
+- [ ] Java 8+
 - [ ] Maven 3
 - [ ] Junit 5
+- [ ] Use StringCalculatorKata and dont change project structure
 
 ### Step 1
 Goto StringCalculatorKata and put your first implementation of:
@@ -41,3 +40,9 @@ Support different delimiters:
 ### Step 5
 Calling "add" with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
 If there are multiple negatives, show all of them in the exception message.
+
+### Step 6
+Send us your public repository with StringCalculatorKata implementation so that we can give you feedback
+
+## Credits
+Inspired by Roy Osherove [https://osherove.com/]
