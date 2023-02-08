@@ -16,4 +16,16 @@ class StringCalculatorKataTest {
         // THEN
         Assertions.assertEquals(result, resultOfOnePlusTwo);
     }
+
+    @Test
+    void shouldReturnZeroWhenInputsIsEmpty() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "";
+        int zeroResult = 0;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, zeroResult);
+    }
 }
