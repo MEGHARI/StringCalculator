@@ -52,4 +52,16 @@ class StringCalculatorKataTest {
         // THEN
         Assertions.assertEquals(result, sixResult);
     }
+
+    @Test
+    void shouldReturnSumOfForNumbers() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1,2,3,4";
+        int tenResult = 10;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, tenResult);
+    }
 }
