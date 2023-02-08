@@ -28,4 +28,16 @@ class StringCalculatorKataTest {
         // THEN
         Assertions.assertEquals(result, zeroResult);
     }
+
+    @Test
+    void shouldReturnZeroWhenPartOfInputsIsEmpty() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1";
+        int valueInputResult = 1;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, valueInputResult);
+    }
 }
