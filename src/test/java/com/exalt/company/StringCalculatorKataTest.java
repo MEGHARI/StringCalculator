@@ -40,4 +40,16 @@ class StringCalculatorKataTest {
         // THEN
         Assertions.assertEquals(result, valueInputResult);
     }
+
+    @Test
+    void shouldReturnSumOfThreeNumbers() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1,2,3";
+        int sixResult = 6;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, sixResult);
+    }
 }

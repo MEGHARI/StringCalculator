@@ -6,11 +6,16 @@ public class StringCalculatorKata {
         if (numbers.isEmpty()) {
             return 0;
         }
-        if(!numbers.contains(",")) {
+        if (!numbers.contains(",")) {
             return Integer.parseInt(numbers);
+        } else {
+            String[] arrayNumbers = numbers.split(",");
+            int resultSum = 0;
+            for (String number : arrayNumbers) {
+                resultSum += Integer.parseInt(number);
+            }
+            return resultSum;
         }
-        int firstArgument = Integer.parseInt(numbers.split(",")[0]);
-        int secondArgument = Integer.parseInt(numbers.split(",")[1]);
-        return firstArgument + secondArgument;
+
     }
 }
