@@ -64,4 +64,30 @@ class StringCalculatorKataTest {
         // THEN
         Assertions.assertEquals(result, tenResult);
     }
+
+    @Test
+    void shouldReturnSumOFTwoNumbersSeparatedWithNewLine() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1\n2";
+        int resultOfOnePlusTwo = 3;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, resultOfOnePlusTwo);
+    }
+
+    @Test
+    void shouldReturnSumOFTHreeNumbersSeparatedWithNewLine() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1\n2\n3";
+        int sixResult = 6;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, sixResult);
+    }
+
+
 }
