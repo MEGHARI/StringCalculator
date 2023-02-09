@@ -16,7 +16,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, resultOfOnePlusTwo);
+        Assertions.assertEquals(resultOfOnePlusTwo,result);
     }
 
     @Test
@@ -28,7 +28,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, zeroResult);
+        Assertions.assertEquals(zeroResult,result);
     }
 
     @Test
@@ -40,7 +40,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, valueInputResult);
+        Assertions.assertEquals(valueInputResult,result);
     }
 
     @Test
@@ -52,7 +52,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, tenResult);
+        Assertions.assertEquals(tenResult,result);
     }
 
     @Test
@@ -64,7 +64,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, resultOfOnePlusTwo);
+        Assertions.assertEquals(resultOfOnePlusTwo,result);
     }
 
     @ParameterizedTest
@@ -76,7 +76,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(input);
         // THEN
-        Assertions.assertEquals(result, sixResult);
+        Assertions.assertEquals(sixResult, result);
     }
 
     @Test
@@ -88,7 +88,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, finalResult);
+        Assertions.assertEquals(finalResult,result);
     }
 
     @Test
@@ -100,7 +100,7 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, finalResult);
+        Assertions.assertEquals(finalResult,result);
     }
 
 
