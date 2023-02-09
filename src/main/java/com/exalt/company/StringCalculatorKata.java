@@ -4,15 +4,19 @@ import java.util.Arrays;
 
 public class StringCalculatorKata {
 
+
+    private static final String NEW_LINE = "\n";
+    private static final String COMMA = ",";
+
     int add(String numbers) {
         int result = 0;
-        if (!numbers.contains(",")) {
-            if (numbers.contains("\n")) {
-                return Arrays.stream(numbers.split("\n")).mapToInt(Integer::parseInt).sum();
-            }
+        String numbersWithoutNewLine = numbers.replace(NEW_LINE, COMMA);
+        if (!numbersWithoutNewLine.contains(COMMA)) {
             return numbers.isEmpty() ? result : Integer.parseInt(numbers);
         }
-        return Arrays.stream(numbers.split(",")).mapToInt(Integer::parseInt).sum();
+        return Arrays.stream(numbersWithoutNewLine.split(COMMA)).mapToInt(Integer::parseInt).sum();
+
+
     }
 
 

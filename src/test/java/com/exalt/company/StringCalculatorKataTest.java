@@ -2,6 +2,8 @@ package com.exalt.company;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class StringCalculatorKataTest {
 
@@ -42,18 +44,6 @@ class StringCalculatorKataTest {
     }
 
     @Test
-    void shouldReturnSumOfThreeNumbers() {
-        // GIVEN
-        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
-        String inputArgument = "1,2,3";
-        int sixResult = 6;
-        // WHEN
-        int result = stringCalculatorKata.add(inputArgument);
-        // THEN
-        Assertions.assertEquals(result, sixResult);
-    }
-
-    @Test
     void shouldReturnSumOfForNumbers() {
         // GIVEN
         StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
@@ -77,16 +67,40 @@ class StringCalculatorKataTest {
         Assertions.assertEquals(result, resultOfOnePlusTwo);
     }
 
-    @Test
-    void shouldReturnSumOFTHreeNumbersSeparatedWithNewLine() {
+    @ParameterizedTest
+    @ValueSource(strings = {"1,2,3", "1\n2\n3", "1\n2,3"})
+    void shouldReturnSix(String input) {
         // GIVEN
         StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
-        String inputArgument = "1\n2\n3";
         int sixResult = 6;
+        // WHEN
+        int result = stringCalculatorKata.add(input);
+        // THEN
+        Assertions.assertEquals(result, sixResult);
+    }
+
+    @Test
+    void shouldReturnSumOfSixNumbersSeparatedWithNewLineAndComma() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1\n2,3,4\n5,6";
+        int finalResult = 21;
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(result, sixResult);
+        Assertions.assertEquals(result, finalResult);
+    }
+
+    @Test
+    void shouldReturnSumOfNumbersSeparatedWithNewLineAndComma() {
+        // GIVEN
+        StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+        String inputArgument = "1,\n";
+        int finalResult = 1;
+        // WHEN
+        int result = stringCalculatorKata.add(inputArgument);
+        // THEN
+        Assertions.assertEquals(result, finalResult);
     }
 
 
