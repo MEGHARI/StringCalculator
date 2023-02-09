@@ -88,20 +88,24 @@ class StringCalculatorKataTest {
         // WHEN
         int result = stringCalculatorKata.add(inputArgument);
         // THEN
-        Assertions.assertEquals(finalResult,result);
+        Assertions.assertEquals(finalResult, result);
     }
 
-    @Test
-    void shouldReturnSumOfNumbersSeparatedWithNewLineAndComma() {
+    @ParameterizedTest
+    @ValueSource(strings = {"1,,", "1,\n"})
+    void shouldReturnNumberWhenAdditionWithNewlineOrComma(String input) {
+        // Remarque : on ne peut pas effectuer la somme d'un entier avec un
+        // caractère special, mais dans cet exercice on l"ignore et on le concidere comme 0.
+        // Exemple : si "x,\n" ou "x,,"xet x =  un entier, alors la methode add renvoie X
         // GIVEN
         StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
-        String inputArgument = "1,\n";
         int finalResult = 1;
         // WHEN
-        int result = stringCalculatorKata.add(inputArgument);
+        int result = stringCalculatorKata.add(input);
         // THEN
-        Assertions.assertEquals(finalResult,result);
+        Assertions.assertEquals(finalResult, result);
     }
+
 
 
 }
